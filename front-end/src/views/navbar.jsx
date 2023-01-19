@@ -11,7 +11,7 @@ const NavBar = () => {
           <Link to="/new" className="navbar">
             new listing
           </Link>
-          <Link to="/id" className="navbar">
+          <Link to="/marketplace" className="navbar">
             marketplace
           </Link>
         </div>
