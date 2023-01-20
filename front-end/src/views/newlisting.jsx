@@ -1,7 +1,7 @@
 const React = require('react')
 const Def = require('../default')
 
-function new_listing () {
+function NewListing () {
     return (
         <Def>
           <main>
@@ -38,4 +38,4 @@ function new_listing () {
     )
 }
 
-module.exports = new_listing
+module.exports = NewListing

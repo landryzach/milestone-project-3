@@ -1,5 +1,9 @@
+import { Route, Routes } from "react-router-dom";
+import './App.css';import Home from './Home'
+import Home from './views/Home'
+import NewListing from './views/NewListing'
+import EditListing from './views/EditListing'
 
-import './App.css';
 
 function App() {
   return (
