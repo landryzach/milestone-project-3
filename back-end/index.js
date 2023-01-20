@@ -4,17 +4,22 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 const app = express();
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.use(express.json())
+app.use('/marketplace', require('./controllers/marketplace'))
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
+app.get('/', (req, res) => {
+  res.render('Home');
 });
-
-const marketplaceController = require('./controller/marketplace.js')
-  app.use('/marketplace', marketplaceController);
 
 // app.use(express.static(path.join(__dirname, 'front-end-react', 'build')))
 
-aapp.listen(process.env.PORT, () => {
+app.get('*', (req,res) => {
+  res.status(404).send('<h1>404: PAGE NOT FOUND</h1>')
+})
+
+app.listen(process.env.PORT, () => {
     console.log(`Listening on ${process.env.PORT}`)
 })
