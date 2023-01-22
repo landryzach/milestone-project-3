@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NavBar from "./NavBar";
 
 const Home = () => {
   const [listings, setListings] = useState([]);
