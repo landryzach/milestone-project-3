@@ -21,4 +21,4 @@ function Home () {
     )
   }  
 
-module.exports = Home
+  export default Home

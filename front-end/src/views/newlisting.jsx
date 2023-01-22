@@ -38,4 +38,4 @@ function NewListing () {
     )
 }
 
-module.exports = NewListing
+export default NewListing
