@@ -138,4 +138,4 @@ function EditListing() {
 	)
 }
 
-export default EditPlaceForm
+export default EditListing
