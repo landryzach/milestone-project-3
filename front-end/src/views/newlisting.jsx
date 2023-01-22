@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('../default')
+const Def = require('./Default')
 
 function NewListing () {
     return (
@@ -31,7 +31,7 @@ function NewListing () {
                     <label htmlFor="state">State</label>
                     <input className="form-control" id="state" name="state" required/>
                 </div>
-                <input className="btn btn-primary" type="submit" value="Add Listing" />
+                <input className="btn btn-success" type="submit" value="Add Listing" />
             </form>
           </main>
         </Def>

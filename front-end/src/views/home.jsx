@@ -13,7 +13,7 @@ function Home () {
                 </div>
               </div>
               <a href="/marketplace">
-                 <button className="button">Marketplace</button>
+                 <button className="btn-primary">Marketplace</button>
               </a>
 
           </main>

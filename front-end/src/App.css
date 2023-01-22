@@ -10,16 +10,56 @@ html {
   color: #ffffff;
 }
 
-button { 
-  background-color: #c95a5a;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  padding: 8px 15px;
+h1 {
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
+  color: white;
 }
+
+h2{
+  color: white;
+}
+
+nav{
+  background-color: black;
+  padding: 10px;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li{
+  display: inline;
+  margin-right: 25px;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5em;
+}
+
+/*nav a:hover{
+  color: pink;
+  text-decoration: none;
+}
+
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  padding: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+}
+
+ #comment-section{
+  padding: 20px;
+} */
