@@ -6,15 +6,13 @@ import NewListing from './views/NewListing'
 
 
 function App() {
-  return (
-            
-              <Routes>
-                <Route path="/" element={<Home />} />
+  return (      
+           <Routes>
+            <Route path="/" element={<Home />} />
                 
-                <Route path="/NewListing" element={<NewListing />} />
+            <Route path="/NewListing" element={<NewListing />} />
                 
-              </Routes>
-    
+            </Routes>
   );
 }
 

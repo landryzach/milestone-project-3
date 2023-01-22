@@ -5,11 +5,6 @@ const PORT = process.env.PORT;
 const app = express();
 const { Sequelize } = require('sequelize')
 
-app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
-app.use(express.static('public'))
-
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/marketplace', require('./controllers/marketplace'))
