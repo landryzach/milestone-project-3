@@ -1,21 +1,27 @@
+'use strict';
+const { Model } = require('sequelize');
 
+module.exports = (sequelize, DataTypes) => {
 
-module.exports = [{
-    make: 'Toyota',
-    model: 'Tacoma',
-    year: '1999',
-    city: 'Seattle',
-    state: 'WA',
-    mileage: '189,000',
-    price: '$2000',
-    pic: '/images/99Tacoma.jpg'
+  Marketplace.init({
+    id: {
+      type: DataTypes.SMALLINT,
+      primaryKey: true,
+      autoIncrement: true
+
+    },
+    make: DataTypes.STRING,
+    model: DataTypes.STRING,
+    year: DataTypes.INTEGER,
+    city: DataTypes.STRING,
+    state: DataTypes.STRING,
+    mileage: DataTypes.INTEGER,
+    pic: DataTypes.STRING,
+    price: DataTypes.INTEGER,
   }, {
-    make: 'Honda',
-    model: 'Civic',
-    year: '2006',
-    city: 'Phoenix',
-    state: 'AZ',
-    mileage: '220,000',
-    price: '$3500',
-    pic: '/images/06Civic.jpg'
-  }]
+    sequelize,
+    underscored: true,
+    modelName: 'Markeplace',
+  });
+  return Marketplace;
+};
