@@ -1,9 +1,8 @@
 const React = require('react')
-const Def = require('./Default')
+
 
 function NewListing () {
     return (
-        <Def>
           <main>
             <h1>Create a New Listing</h1>
             <form method="POST" action="/places">
@@ -34,8 +33,7 @@ function NewListing () {
                 <input className="btn btn-success" type="submit" value="Add Listing" />
             </form>
           </main>
-        </Def>
     )
 }
 
-export default NewListing
+module.exports = NewListing

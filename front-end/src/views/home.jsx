@@ -1,24 +1,28 @@
-const React = require('react')
-const Def = require('./Default')
+import { useState, useEffect } from "react";
 
-function Home () {
-    return (
-      <Def>
-          <main>
-              <h1>HOME</h1>
-              <div>
-                <img src="/images/HomePageCar.jpg" alt="Volkswagon Van"/>
-                <div>
-                  Photo by <a href="https://unsplash.com/@dinoreichmuth?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dino Reichmuth</a> on <a href="https://unsplash.com/s/photos/free-car?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div>
-              </div>
-              <a href="/marketplace">
-                 <button className="btn-primary">Marketplace</button>
-              </a>
+const Home = () => {
+  const [listings, setListings] = useState([]);
 
-          </main>
-      </Def>
-    )
-  }  
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("/listings", {
+        mode: "cors",
+      });
+      const jsonData = await data.json();
+      setListings(jsonData);
+    };
+    fetchData();
+  }, []);
 
-  export default Home
+  const displayListings = listings.map((listing, i) => {
+    return <ListItem props={listing} key={i} />;
+  });
+  return (
+    <>
+      <NavBar />
+      <div className="movie-library">{displayListings}</div>
+    </>
+  );
+}
+
+export default Home;
