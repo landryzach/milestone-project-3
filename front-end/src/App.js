@@ -6,9 +6,11 @@ import EditListing from './views/EditListing'
 import Register from './views/Register'
 import SignIn from './views/SignIn'
 import marketplace from './controllers/marketplace'
+import CurrentUserProvider from './contexts/CurrentUser'
 
 function App() {
   return ( 
+        <CurrentUserProvider>
           <BrowserRouter>     
            <Routes>
             <Route path="/" element={<Home />} />
@@ -19,6 +21,7 @@ function App() {
             <Route path="/EditListing" element={<EditListing />} />   
             </Routes>
           </BrowserRouter>
+        </CurrentUserProvider>  
   );
 }
 
