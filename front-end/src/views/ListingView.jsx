@@ -24,11 +24,10 @@ const ListingView = ({ props }) => {
     };
 
     return (
-      <div>
+      <div className="listing_container">
         <div>
           <div>
             <img
-              className="image"
               src={`/images/ComingSoon.jpg`}
               alt={`${props.make} cover`}
               height={"350px"}

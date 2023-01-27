@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <div className="movie-library">{displayListings}</div>
+      <div>{displayListings}</div>
     </>
   );
 }
